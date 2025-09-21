@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week1 Day2: Love Story お願い上手になろう</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #f3e5f5;
+            min-height: 100vh;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: #b39ddb;
+            color: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .day-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #7e57c2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #7e57c2;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #b39ddb;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-family: 'Kiwi Maru', serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .examples {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Kiwi Maru', serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102,126,234,0.4);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .scramble-exercise {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .word-card {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s;
+            font-size: 0.9em;
+        }
+
+        .word-card:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        .word-card.selected {
+            background: #48bb78;
+            transform: scale(1.05);
+        }
+
+        .answer-area {
+            min-height: 60px;
+            background: #f7fafc;
+            border: 2px dashed #cbd5e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Week1 Day2</h1>
+            <p>Love Story お願い上手になろう</p>
+            <p style="font-size: 0.9em; opacity: 0.9;">文を作ってみよう！</p>
+        </div>
+
+        <div class="day-info">
+            <h3>📅 今日の目標</h3>
+            <p>昨日見つけた命令文の単語を使って、自分でも文を作れるようになろう。並び替えで英語の語順に慣れよう！</p>
+        </div>
+
+        <form id="worksheetForm">
+            <div class="section">
+                <h2>👤 基本情報</h2>
+                <div class="input-group">
+                    <label for="studentName">お名前</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎵 復習：昨日見つけた命令文</h2>
+                <div class="examples">
+                    <p><strong>Love Storyから見つけた命令文の例：</strong></p>
+                    <p>• Take me somewhere（どこかに連れて行って）</p>
+                    <p>• Save me（私を救って）</p>
+                    <p>• Just say yes（ただイエスと言って）</p>
+                    <p>• Please don't go（お願い、行かないで）</p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="remember">昨日一番印象に残った命令文はどれですか？</label>
+                    <input type="text" id="remember" name="remember" placeholder="例：Take me somewhere">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🧩 並び替え練習</h2>
+                <p>下の単語カードをクリックして、正しい英文を作ってみましょう！</p>
+                
+                <div class="input-group">
+                    <label>問題1: 「私を助けて」</label>
+                    <div class="scramble-exercise" id="scramble1">
+                        <div class="word-card" onclick="selectWord(this, 'answer1')">me</div>
+                        <div class="word-card" onclick="selectWord(this, 'answer1')">Help</div>
+                    </div>
+                    <div class="answer-area" id="answer1"></div>
+                    <input type="hidden" id="answer1_result" name="answer1">
+                </div>
+
+                <div class="input-group">
+                    <label>問題2: 「ここに来て」</label>
+                    <div class="scramble-exercise" id="scramble2">
+                        <div class="word-card" onclick="selectWord(this, 'answer2')">here</div>
+                        <div class="word-card" onclick="selectWord(this, 'answer2')">Come</div>
+                    </div>
+                    <div class="answer-area" id="answer2"></div>
+                    <input type="hidden" id="answer2_result" name="answer2">
+                </div>
+
+                <div class="input-group">
+                    <label>問題3: 「私に電話して」</label>
+                    <div class="scramble-exercise" id="scramble3">
+                        <div class="word-card" onclick="selectWord(this, 'answer3')">me</div>
+                        <div class="word-card" onclick="selectWord(this, 'answer3')">Call</div>
+                    </div>
+                    <div class="answer-area" id="answer3"></div>
+                    <input type="hidden" id="answer3_result" name="answer3">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💡 気づき</h2>
+                <div class="input-group">
+                    <label for="pattern">並び替えをしてみて、英語の命令文の特徴に気づきましたか？</label>
+                    <textarea id="pattern" name="pattern" placeholder="例：動詞が最初に来る、日本語と語順が違う　など"></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎯 応用練習</h2>
+                <div class="input-group">
+                    <label for="mysentence">今度は自分で命令文を作ってみましょう。「〜して」という文を英語で書いてみてください。</label>
+                    <input type="text" id="mysentence" name="mysentence" placeholder="例：Tell me your name">
+                </div>
+                
+                <div class="input-group">
+                    <label for="japanese">↑の英文は日本語で何と言いたかったですか？</label>
+                    <input type="text" id="japanese" name="japanese" placeholder="例：あなたの名前を教えて">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>😊 今日の振り返り</h2>
+                <div class="input-group">
+                    <label for="feeling">英語の語順に慣れてきましたか？</label>
+                    <select id="feeling" name="feeling" required>
+                        <option value="">選択してください</option>
+                        <option value="very_good">とても慣れてきた</option>
+                        <option value="good">少し慣れてきた</option>
+                        <option value="normal">まだよくわからない</option>
+                        <option value="difficult">難しい</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="questions">質問や気になることがあれば書いてください</label>
+                    <textarea id="questions" name="questions" placeholder="なんでも書いてください"></textarea>
+                </div>
+            </div>
+
+            <button type="button" class="button" onclick="submitWorksheet()">
+                Day2 完了！
+            </button>
+        </form>
+    </div>
+
+    <script>
+        let selectedWords = {};
+
+        function selectWord(wordElement, answerId) {
+            const answerArea = document.getElementById(answerId);
+            const hiddenInput = document.getElementById(answerId + '_result');
+            
+            // 単語をクリックした時の処理
+            if (!selectedWords[answerId]) {
+                selectedWords[answerId] = [];
+            }
+            
+            // 単語を答えエリアに追加
+            const wordClone = wordElement.cloneNode(true);
+            wordClone.classList.add('selected');
+            wordClone.onclick = function() {
+                removeWord(this, answerId);
+            };
+            
+            answerArea.appendChild(wordClone);
+            selectedWords[answerId].push(wordElement.textContent);
+            
+            // 元の単語カードを非表示
+            wordElement.style.opacity = '0.3';
+            wordElement.onclick = null;
+            
+            // 隠しinputに結果を保存
+            hiddenInput.value = selectedWords[answerId].join(' ');
+        }
+
+        function removeWord(wordElement, answerId) {
+            // 答えエリアから単語を削除
+            const wordText = wordElement.textContent;
+            wordElement.remove();
+            
+            // selectedWordsから削除
+            const index = selectedWords[answerId].indexOf(wordText);
+            if (index > -1) {
+                selectedWords[answerId].splice(index, 1);
+            }
+            
+            // 元の単語カードを再表示
+            const originalWords = document.querySelectorAll('#scramble' + answerId.slice(-1) + ' .word-card');
+            originalWords.forEach(word => {
+                if (word.textContent === wordText && word.style.opacity === '0.3') {
+                    word.style.opacity = '1';
+                    word.onclick = function() {
+                        selectWord(this, answerId);
+                    };
+                }
+            });
+            
+            // 隠しinputを更新
+            const hiddenInput = document.getElementById(answerId + '_result');
+            hiddenInput.value = selectedWords[answerId].join(' ');
+        }
+
+        function submitWorksheet() {
+            // 入力確認
+            const studentName = document.getElementById('studentName').value;
+            if (!studentName) {
+                alert('お名前を入力してください。');
+                return;
+            }
+
+            // 完了メッセージを表示
+            showCompletionMessage();
+        }
+
+        function showCompletionMessage() {
+            const completionDiv = document.createElement('div');
+            completionDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #b39ddb;
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(179, 157, 219, 0.3);
+                text-align: center;
+                z-index: 1000;
+                font-family: 'Noto Sans JP', sans-serif;
+                max-width: 400px;
+            `;
+            
+            completionDiv.innerHTML = `
+                <h3 style="margin: 0 0 15px 0; font-size: 1.3em;">✨ Day2 完了！ ✨</h3>
+                <p style="margin: 10px 0; line-height: 1.6;">
+                    並び替え練習お疲れさまでした！<br>
+                    画面のスクリーンショットを撮って<br>
+                    LINEで送信してください。
+                </p>
+                <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
+                    📱 スクリーンショット後、LINEで<br>
+                    「Day2完了しました」とメッセージを<br>
+                    添えて送信してくださいね。
+                </p>
+                <button onclick="this.parentElement.remove()" 
+                        style="margin-top: 20px; padding: 10px 20px; background: white; color: #7e57c2; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">
+                    閉じる
+                </button>
+            `;
+            
+            document.body.appendChild(completionDiv);
+        }
+    </script>
+</body>
+</html>

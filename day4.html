@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week1 Day4: Love Story お願い上手になろう</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #f3e5f5;
+            min-height: 100vh;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: #b39ddb;
+            color: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .day-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #7e57c2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #7e57c2;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #b39ddb;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #424242;
+        }
+
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1bee7;
+            border-radius: 10px;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #b39ddb;
+            box-shadow: 0 0 0 3px rgba(179, 157, 219, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .examples {
+            background: #f8f5ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #b39ddb;
+        }
+
+        .button {
+            background: #b39ddb;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background: #7e57c2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(126, 87, 194, 0.4);
+        }
+
+        .hostel-scenario {
+            background: #f8f5ff;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #b39ddb;
+        }
+
+        .hostel-scenario h3 {
+            color: #7e57c2;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .scenario-item {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .music-note {
+            background: #7e57c2;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Week1 Day4</h1>
+            <p>Love Story お願い上手になろう</p>
+            <p style="font-size: 0.9em; opacity: 0.9;">ホステルで実践＋オアシス探検</p>
+        </div>
+
+        <div class="day-info">
+            <h3>📅 今日の目標</h3>
+            <p>ホステルで実際に使える場面を想像しながら練習し、さらにオアシス（Oasis）の歌からも命令文を探してみよう！</p>
+        </div>
+
+        <form id="worksheetForm">
+            <div class="section">
+                <h2>👤 基本情報</h2>
+                <div class="input-group">
+                    <label for="studentName">お名前</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🏨 ホステル場面で実践</h2>
+                
+                <div class="hostel-scenario">
+                    <h3>シーン1: チェックイン</h3>
+                    <div class="scenario-item">
+                        <strong>あなた：</strong> "Please help me with check-in."（チェックインを手伝ってください）<br>
+                        <strong>スタッフ：</strong> "Of course! Show me your passport, please."（もちろんです！パスポートを見せてください）
+                    </div>
+                </div>
+
+                <div class="hostel-scenario">
+                    <h3>シーン2: 部屋で困った時</h3>
+                    <div class="scenario-item">
+                        <strong>あなた：</strong> "Please help me. The shower doesn't work."（助けてください。シャワーが動きません）<br>
+                        <strong>ルームメイト：</strong> "Don't worry! Call the front desk, please."（心配しないで！フロントに電話してね）
+                    </div>
+                </div>
+
+                <div class="hostel-scenario">
+                    <h3>シーン3: 朝食の時間</h3>
+                    <div class="scenario-item">
+                        <strong>あなた：</strong> "Pass me the butter, please."（バターを取ってください）<br>
+                        <strong>他の客：</strong> "Here you go! Try this jam, please."（はい、どうぞ！このジャムも試してみて）
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="hostel_practice1">シーン1で、もしパスポートを忘れた部屋に取りに行く時、ルームメイトに何と言いますか？（Pleaseを使って）</label>
+                    <input type="text" id="hostel_practice1" name="hostel_practice1" placeholder="例：Please wait here.">
+                </div>
+
+                <div class="input-group">
+                    <label for="hostel_practice2">シーン2で、シャワーが直った後、助けてくれた人に何と言いますか？</label>
+                    <input type="text" id="hostel_practice2" name="hostel_practice2" placeholder="Thank you!以外で考えてみましょう">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎵 オアシス探検！</h2>
+                <div class="examples">
+                    <p><strong>オアシス（Oasis）も命令文がたくさん！</strong></p>
+                    <p>有名な曲から命令文を探してみましょう：</p>
+                </div>
+
+                <div class="music-note">🎵 Don't Look Back in Anger</div>
+                <div class="input-group">
+                    <label for="oasis1">この曲名に命令文が隠れています。どの部分が命令文だと思いますか？</label>
+                    <input type="text" id="oasis1" name="oasis1" placeholder="Don't...">
+                </div>
+
+                <div class="music-note">🎵 Stop Crying Your Heart Out</div>
+                <div class="input-group">
+                    <label for="oasis2">この曲名の最初の単語は何ですか？命令文の特徴がありますね。</label>
+                    <input type="text" id="oasis2" name="oasis2" placeholder="最初の単語は...">
+                </div>
+
+                <div class="input-group">
+                    <label for="oasis_discovery">オアシスの曲名を見て、Love Storyと同じような命令文の特徴を発見しましたか？</label>
+                    <textarea id="oasis_discovery" name="oasis_discovery" placeholder="例：どちらも動詞で始まっている、Don'tで始まる否定の命令文がある..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💫 Can you please...?</h2>
+                <div class="examples">
+                    <p><strong>もっと丁寧にお願いしたい時：</strong></p>
+                    <p>• Can you help me? (助けてもらえますか？)</p>
+                    <p>• Can you please help me? (お願いします、助けてもらえますか？)</p>
+                    <p>• Could you please help me? (もしよろしければ、助けていただけますか？)</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="can_you">「窓を開けてもらえますか？」を3つの丁寧さレベルで書いてみてください</label>
+                    <textarea id="can_you" name="can_you" placeholder="1. Can you open the window?&#10;2. Can you please...&#10;3. Could you please..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💭 今日の発見</h2>
+                <div class="input-group">
+                    <label for="discovery">Love StoryとOasisの両方に命令文があることがわかりました。音楽って命令文の宝庫ですね！どう思いますか？</label>
+                    <textarea id="discovery" name="discovery" placeholder="あなたの発見や感想を書いてください"></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>😊 今日の振り返り</h2>
+                <div class="input-group">
+                    <label for="feeling">ホステルでの実践的な表現は使えそうですか？</label>
+                    <select id="feeling" name="feeling" required>
+                        <option value="">選択してください</option>
+                        <option value="very_good">とても使えそう</option>
+                        <option value="good">使えそう</option>
+                        <option value="normal">まだよくわからない</option>
+                        <option value="difficult">難しい</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="questions">質問や気になることがあれば書いてください</label>
+                    <textarea id="questions" name="questions" placeholder="なんでも書いてください"></textarea>
+                </div>
+            </div>
+
+            <button type="button" class="button" onclick="submitWorksheet()">
+                Day4 完了！
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function submitWorksheet() {
+            // 入力確認
+            const studentName = document.getElementById('studentName').value;
+            if (!studentName) {
+                alert('お名前を入力してください。');
+                return;
+            }
+
+            // 完了メッセージを表示
+            showCompletionMessage();
+        }
+
+        function showCompletionMessage() {
+            const completionDiv = document.createElement('div');
+            completionDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #b39ddb;
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(179, 157, 219, 0.3);
+                text-align: center;
+                z-index: 1000;
+                font-family: 'Noto Sans JP', sans-serif;
+                max-width: 400px;
+            `;
+            
+            completionDiv.innerHTML = `
+                <h3 style="margin: 0 0 15px 0; font-size: 1.3em;">✨ Day4 完了！ ✨</h3>
+                <p style="margin: 10px 0; line-height: 1.6;">
+                    ホステル実践＋オアシス探検お疲れさまでした！<br>
+                    画面のスクリーンショットを撮って<br>
+                    LINEで送信してください。
+                </p>
+                <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
+                    📱 スクリーンショット後、LINEで<br>
+                    「Day4完了しました」とメッセージを<br>
+                    添えて送信してくださいね。
+                </p>
+                <button onclick="this.parentElement.remove()" 
+                        style="margin-top: 20px; padding: 10px 20px; background: white; color: #7e57c2; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">
+                    閉じる
+                </button>
+            `;
+            
+            document.body.appendChild(completionDiv);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week1 Day5: Love Story お願い上手になろう</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kiwi Maru', serif;
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            min-height: 100vh;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .day-info {
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #667eea;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.95);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-family: 'Kiwi Maru', serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .examples {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #f3e5f5;
+            min-height: 100vh;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: #b39ddb;
+            color: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .day-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #7e57c2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #7e57c2;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #b39ddb;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #424242;
+        }
+
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1bee7;
+            border-radius: 10px;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #b39ddb;
+            box-shadow: 0 0 0 3px rgba(179, 157, 219, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .examples {
+            background: #f8f5ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #b39ddb;
+        }
+
+        .button {
+            background: #b39ddb;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background: #7e57c2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(126, 87, 194, 0.4);
+        }
+
+        .achievement-box {
+            background: #b39ddb;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 25px 0;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+        }
+
+        .achievement-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #7e57c2;
+        }
+
+        .skill-card h4 {
+            color: #7e57c2;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .practice-scenario {
+            background: #f8f5ff;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #b39ddb;
+        }
+
+        .practice-scenario h4 {
+            color: #7e57c2;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .next-week-preview {
+            background: #e1bee7;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #b39ddb;
+        }
+
+        .next-week-preview h4 {
+            color: #7e57c2;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Week1 Day5</h1>
+            <p>Love Story お願い上手になろう</p>
+            <p style="font-size: 0.9em; opacity: 0.9;">まとめ＆実践準備</p>
+        </div>
+
+        <div class="achievement-box">
+            <h3>🎉 Week1 完走おめでとうございます！</h3>
+            <p>5日間でたくさんの「お願い表現」を覚えましたね。今日は今週の総まとめをして、実際に使う準備をしましょう！</p>
+        </div>
+
+        <form id="worksheetForm">
+            <div class="section">
+                <h2>👤 基本情報</h2>
+                <div class="input-group">
+                    <label for="studentName">お名前</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📝 Week1で身につけたスキル</h2>
+                
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <h4>Day1</h4>
+                        <p>Love Storyから命令文を発見</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Day2</h4>
+                        <p>単語を並び替えて英文作成</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Day3</h4>
+                        <p>Pleaseの4つのパターン</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Day4</h4>
+                        <p>ホステル実践＋オアシス探検</p>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="most_useful">この5日間で一番役に立ちそうだと思ったのはどれですか？理由も教えてください。</label>
+                    <textarea id="most_useful" name="most_useful" placeholder="例：Day3のPleaseのパターンが一番役立ちそう。丁寧にお願いできるから..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎯 実践テスト</h2>
+                <p>今週覚えた表現を使って、以下の場面で何と言うか書いてみましょう：</p>
+
+                <div class="practice-scenario">
+                    <h4>シナリオ1: ホステルのフロントで</h4>
+                    <p><strong>状況：</strong>チェックインしたいが、スタッフが忙しそう</p>
+                    <div class="input-group">
+                        <label for="scenario1">あなたは何と声をかけますか？（丁寧に）</label>
+                        <input type="text" id="scenario1" name="scenario1" placeholder="Excuse me, ...">
+                    </div>
+                </div>
+
+                <div class="practice-scenario">
+                    <h4>シナリオ2: ルームメイトと</h4>
+                    <p><strong>状況：</strong>シャワールームの使い方がわからない</p>
+                    <div class="input-group">
+                        <label for="scenario2">ルームメイトに助けを求める時、何と言いますか？</label>
+                        <input type="text" id="scenario2" name="scenario2" placeholder="Can you ...">
+                    </div>
+                </div>
+
+                <div class="practice-scenario">
+                    <h4>シナリオ3: 朝食の時</h4>
+                    <p><strong>状況：</strong>塩が遠くにあって取れない</p>
+                    <div class="input-group">
+                        <label for="scenario3">他のお客さんに何とお願いしますか？</label>
+                        <input type="text" id="scenario3" name="scenario3" placeholder="Could you ...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🌟 自信レベル チェック</h2>
+                
+                <div class="input-group">
+                    <label for="confidence_level">今、ホステルで基本的なお願いをする自信はどのくらいありますか？</label>
+                    <select id="confidence_level" name="confidence_level" required>
+                        <option value="">選択してください</option>
+                        <option value="very_confident">とても自信がある</option>
+                        <option value="confident">自信がある</option>
+                        <option value="somewhat">まあまあ</option>
+                        <option value="not_confident">まだ自信がない</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="biggest_learning">この1週間で一番大きな発見は何でしたか？</label>
+                    <textarea id="biggest_learning" name="biggest_learning" placeholder="例：英語って文法用語を知らなくても話せそうだと思った..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎵 音楽と英語学習</h2>
+                
+                <div class="input-group">
+                    <label for="music_effect">Love StoryやOasisを通して英語を学ぶのはどうでしたか？</label>
+                    <select id="music_effect" name="music_effect" required>
+                        <option value="">選択してください</option>
+                        <option value="very_good">とても良かった</option>
+                        <option value="good">良かった</option>
+                        <option value="normal">普通</option>
+                        <option value="not_good">あまり良くなかった</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="favorite_phrase">今週の中で一番気に入った英語フレーズは何ですか？</label>
+                    <input type="text" id="favorite_phrase" name="favorite_phrase" placeholder="例：Please don't go">
+                </div>
+
+                <div class="input-group">
+                    <label for="phrase_reason">そのフレーズを選んだ理由は？</label>
+                    <textarea id="phrase_reason" name="phrase_reason" placeholder="音が好き、意味が素敵、使いやすそう　など"></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📅 今週使ってみたいフレーズ</h2>
+                
+                <div class="input-group">
+                    <label for="weekly_goal">この1週間で実際に使ってみたい英語フレーズを3つ選んでください</label>
+                    <textarea id="weekly_goal" name="weekly_goal" placeholder="1. Please help me&#10;2. Can you please...&#10;3. "></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="where_to_use">それらのフレーズをどこで使ってみたいですか？</label>
+                    <textarea id="where_to_use" name="where_to_use" placeholder="例：カフェで、道で外国人に話しかけられた時、ホステルの見学で..."></textarea>
+                </div>
+            </div>
+
+            <div class="next-week-preview">
+                <h4>📖 来週の予告</h4>
+                <p><strong>Week2:</strong> 疑問文（5W1H）を学びます。「いつ」「どこで」「何を」などの質問ができるようになります。新しい楽曲も登場予定！お楽しみに！</p>
+            </div>
+
+            <div class="section">
+                <h2>💭 全体の感想</h2>
+                
+                <div class="input-group">
+                    <label for="overall_feeling">Week1全体を通しての感想をお聞かせください</label>
+                    <textarea id="overall_feeling" name="overall_feeling" placeholder="楽しかった、難しかった、予想と違った　など、何でも書いてください"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="questions">質問や要望があれば何でも書いてください</label>
+                    <textarea id="questions" name="questions" placeholder="なんでも遠慮なく書いてください"></textarea>
+                </div>
+            </div>
+
+            <button type="button" class="button" onclick="submitWorksheet()">
+                Week1 完走！
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function submitWorksheet() {
+            // 入力確認
+            const studentName = document.getElementById('studentName').value;
+            if (!studentName) {
+                alert('お名前を入力してください。');
+                return;
+            }
+
+            // 完了メッセージを表示
+            showCompletionMessage();
+        }
+
+        function showCompletionMessage() {
+            const completionDiv = document.createElement('div');
+            completionDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #b39ddb;
+                color: white;
+                padding: 40px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(179, 157, 219, 0.3);
+                text-align: center;
+                z-index: 1000;
+                font-family: 'Noto Sans JP', sans-serif;
+                max-width: 450px;
+            `;
+            
+            completionDiv.innerHTML = `
+                <h3 style="margin: 0 0 20px 0; font-size: 1.5em;">🎉 Week1 完全制覇！ 🎉</h3>
+                <p style="margin: 15px 0; line-height: 1.8; font-size: 1.1em;">
+                    5日間本当にお疲れさまでした！<br>
+                    「お願い上手」への第一歩を<br>
+                    踏み出しましたね。
+                </p>
+                <p style="margin: 20px 0; line-height: 1.6; opacity: 0.95;">
+                    📱 画面のスクリーンショットを撮って<br>
+                    LINEで「Week1完走しました！」と<br>
+                    報告してください。
+                </p>
+                <p style="margin: 20px 0 0 0; font-size: 0.9em; opacity: 0.9;">
+                    来週はいよいよ疑問文！<br>
+                    新しい音楽と一緒に楽しく学びましょう♪
+                </p>
+                <button onclick="this.parentElement.remove()" 
+                        style="margin-top: 25px; padding: 12px 25px; background: white; color: #7e57c2; border: none; border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 1em;">
+                    閉じる
+                </button>
+            `;
+            
+            document.body.appendChild(completionDiv);
+        }
+    </script>
+</body>
+</html>

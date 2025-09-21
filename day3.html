@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week1 Day3: Love Story お願い上手になろう</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #f3e5f5;
+            min-height: 100vh;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: #b39ddb;
+            color: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .day-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #7e57c2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #7e57c2;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #b39ddb;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #424242;
+        }
+
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1bee7;
+            border-radius: 10px;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #b39ddb;
+            box-shadow: 0 0 0 3px rgba(179, 157, 219, 0.1);
+        }
+
+        .examples {
+            background: #f8f5ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #b39ddb;
+        }
+
+        .button {
+            background: #b39ddb;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background: #7e57c2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(126, 87, 194, 0.4);
+        }
+
+        .pattern-box {
+            background: #f8f5ff;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 2px solid #b39ddb;
+        }
+
+        .pattern-box h3 {
+            color: #7e57c2;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .highlight {
+            background: #7e57c2;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Week1 Day3</h1>
+            <p>Love Story お願い上手になろう</p>
+            <p style="font-size: 0.9em; opacity: 0.9;">Pleaseの4つのパターン</p>
+        </div>
+
+        <div class="day-info">
+            <h3>📅 今日の目標</h3>
+            <p>「Please」を使った丁寧なお願いの仕方を4つのパターンで覚えよう。これでもっと優しく、礼儀正しいお願いができるようになります！</p>
+        </div>
+
+        <form id="worksheetForm">
+            <div class="section">
+                <h2>👤 基本情報</h2>
+                <div class="input-group">
+                    <label for="studentName">お名前</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💫 Pleaseの魔法の力</h2>
+                <div class="examples">
+                    <p>「Please」をつけるだけで、命令文がとても丁寧になります！</p>
+                    <p><strong>例：</strong></p>
+                    <p>❌ Help me!（助けて！）→ ⭐ Please help me.（お願いします、助けてください）</p>
+                    <p>❌ Come here!（ここに来い！）→ ⭐ Please come here.（どうぞこちらへ来てください）</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎯 Pleaseの4つのパターン</h2>
+                
+                <div class="pattern-box">
+                    <h3>パターン1: Please + 動詞</h3>
+                    <div class="pattern-item">
+                        <span class="highlight">Please</span> help me.（お願いします、助けてください）<br>
+                        <span class="highlight">Please</span> wait.（お待ちください）<br>
+                        <span class="highlight">Please</span> come here.（こちらに来てください）
+                    </div>
+                </div>
+
+                <div class="pattern-box">
+                    <h3>パターン2: 動詞 + please</h3>
+                    <div class="pattern-item">
+                        Help me, <span class="highlight">please</span>.（助けてください、お願いします）<br>
+                        Wait, <span class="highlight">please</span>.（待ってください、お願いします）<br>
+                        Come here, <span class="highlight">please</span>.（来てください、お願いします）
+                    </div>
+                </div>
+
+                <div class="pattern-box">
+                    <h3>パターン3: Please don't + 動詞</h3>
+                    <div class="pattern-item">
+                        <span class="highlight">Please don't</span> go.（お願い、行かないで）<br>
+                        <span class="highlight">Please don't</span> worry.（どうぞ心配しないでください）<br>
+                        <span class="highlight">Please don't</span> forget.（忘れないでくださいね）
+                    </div>
+                </div>
+
+                <div class="pattern-box">
+                    <h3>パターン4: Don't + 動詞 + please</h3>
+                    <div class="pattern-item">
+                        <span class="highlight">Don't</span> go, <span class="highlight">please</span>.（行かないで、お願い）<br>
+                        <span class="highlight">Don't</span> worry, <span class="highlight">please</span>.（心配しないで、お願い）<br>
+                        <span class="highlight">Don't</span> forget, <span class="highlight">please</span>.（忘れないで、お願い）
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>✍️ 練習してみよう</h2>
+                
+                <div class="input-group">
+                    <label for="pattern1">パターン1で「静かにして」を丁寧に言ってみてください</label>
+                    <input type="text" id="pattern1" name="pattern1" placeholder="Please + 動詞">
+                </div>
+
+                <div class="input-group">
+                    <label for="pattern2">パターン2で「教えて」を丁寧に言ってみてください</label>
+                    <input type="text" id="pattern2" name="pattern2" placeholder="動詞 + please">
+                </div>
+
+                <div class="input-group">
+                    <label for="pattern3">パターン3で「走らないで」を丁寧に言ってみてください</label>
+                    <input type="text" id="pattern3" name="pattern3" placeholder="Please don't + 動詞">
+                </div>
+
+                <div class="input-group">
+                    <label for="pattern4">パターン4で「泣かないで」を丁寧に言ってみてください</label>
+                    <input type="text" id="pattern4" name="pattern4" placeholder="Don't + 動詞 + please">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎵 Love Storyで確認</h2>
+                <div class="examples">
+                    <p><strong>Love Storyの歌詞にもPleaseが出てきます：</strong></p>
+                    <p>• "Please don't go"（お願い、行かないで）</p>
+                    <p>• "Just say yes"（ただイエスと言って）← Pleaseはないけど丁寧なお願い</p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="love_story_please">Love Storyの "Please don't go" はどのパターンですか？</label>
+                    <select id="love_story_please" name="love_story_please" required>
+                        <option value="">選択してください</option>
+                        <option value="pattern1">パターン1: Please + 動詞</option>
+                        <option value="pattern2">パターン2: 動詞 + please</option>
+                        <option value="pattern3">パターン3: Please don't + 動詞</option>
+                        <option value="pattern4">パターン4: Don't + 動詞 + please</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💭 気づき</h2>
+                <div class="input-group">
+                    <label for="discovery">4つのパターンを見て、どれが一番使いやすそうですか？理由も教えてください。</label>
+                    <textarea id="discovery" name="discovery" placeholder="例：パターン1が使いやすそう。文の最初にPleaseをつけるだけだから..."></textarea>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>😊 今日の振り返り</h2>
+                <div class="input-group">
+                    <label for="feeling">Pleaseの使い方がわかりましたか？</label>
+                    <select id="feeling" name="feeling" required>
+                        <option value="">選択してください</option>
+                        <option value="very_good">とてもよくわかった</option>
+                        <option value="good">だいたいわかった</option>
+                        <option value="normal">まだよくわからない</option>
+                        <option value="difficult">難しい</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="questions">質問や気になることがあれば書いてください</label>
+                    <textarea id="questions" name="questions" placeholder="なんでも書いてください"></textarea>
+                </div>
+            </div>
+
+            <button type="button" class="button" onclick="submitWorksheet()">
+                Day3 完了！
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function submitWorksheet() {
+            // 入力確認
+            const studentName = document.getElementById('studentName').value;
+            if (!studentName) {
+                alert('お名前を入力してください。');
+                return;
+            }
+
+            // 完了メッセージを表示
+            showCompletionMessage();
+        }
+
+        function showCompletionMessage() {
+            const completionDiv = document.createElement('div');
+            completionDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                text-align: center;
+                z-index: 1000;
+                font-family: 'Kiwi Maru', serif;
+                max-width: 400px;
+            `;
+            
+            completionDiv.innerHTML = `
+                <h3 style="margin: 0 0 15px 0; font-size: 1.3em;">✨ Day3 完了！ ✨</h3>
+                <p style="margin: 10px 0; line-height: 1.6;">
+                    Pleaseの4パターン練習お疲れさまでした！<br>
+                    画面のスクリーンショットを撮って<br>
+                    LINEで送信してください。
+                </p>
+                <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
+                    📱 スクリーンショット後、LINEで<br>
+                    「Day3完了しました」とメッセージを<br>
+                    添えて送信してくださいね。
+                </p>
+                <button onclick="this.parentElement.remove()" 
+                        style="margin-top: 20px; padding: 10px 20px; background: white; color: #667eea; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">
+                    閉じる
+                </button>
+            `;
+            
+            document.body.appendChild(completionDiv);
+        }
+    </script>
+</body>
+</html>
