@@ -3,485 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week1: Love Story お願い上手になろう - Day1</title>
+    <title>Week1: Love Story お願い上手になろう</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Kiwi Maru', sans-serif;
-            background: linear-gradient(135deg, #f8f4f0 0%, #f0f2f5 50%, #faf8f6 100%);
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #f3e5f5;
             min-height: 100vh;
-            padding: 8px;
+            color: #424242;
             line-height: 1.6;
-            color: #2c3e50;
         }
-        
+
         .container {
-            max-width: 800px;
-            width: 100%;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            border-radius: 16px;
             padding: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e8e6e3;
         }
-        
+
         .header {
             text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #d4af8c;
-            padding-bottom: 20px;
-        }
-        
-        .header h1 {
-            font-size: 2em;
-            font-weight: 500;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, #8b5a3c, #d4af8c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-        
-        .header .subtitle {
-            color: #7d8590;
-            font-size: 1em;
-            font-weight: 300;
-        }
-        
-        .week-goal {
-            background: linear-gradient(135deg, #f7f3f0, #f0f2f5);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border-left: 4px solid #8b5a3c;
-        }
-        
-        .week-goal h2 {
-            color: #2c3e50;
-            font-size: 1.2em;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-        
-        .pattern-box {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 12px 0;
-            border: 2px solid #d4af8c;
-            text-align: center;
-        }
-        
-        .pattern-text {
-            font-size: 1.3em;
-            color: #8b5a3c;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-        
-        .pattern-example {
-            color: #7d8590;
-            font-size: 0.9em;
-        }
-        
-        .learning-note {
-            background: linear-gradient(135deg, #f8f6f4, #f2f4f7);
-            padding: 18px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            border: 1px solid #d4af8c;
-        }
-        
-        .learning-note h3 {
-            color: #8b5a3c;
-            font-size: 1.05em;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        
-        .learning-note ul {
-            margin: 8px 0;
-            padding-left: 18px;
-        }
-        
-        .learning-note li {
-            margin: 4px 0;
-            color: #5a6c7d;
-            font-size: 0.9em;
-        }
-        
-        .day-section {
-            background: #fff;
-            margin-bottom: 25px;
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid #e8e6e3;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-        }
-        
-        .day-header {
-            background: linear-gradient(135deg, #2c3e50, #5a6c7d);
+            background: #b39ddb;
             color: white;
-            padding: 12px 20px;
+            padding: 40px 20px;
             border-radius: 20px;
-            text-align: center;
-            font-size: 1.1em;
-            font-weight: 500;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .intro-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #7e57c2;
+        }
+
+        .intro-section h2 {
+            color: #7e57c2;
             margin-bottom: 20px;
-        }
-        
-        .activity-section {
-            background: linear-gradient(135deg, #fdfcfb, #f9f8f6);
-            padding: 18px;
-            border-radius: 10px;
-            margin-bottom: 18px;
-            border: 1px solid #ebe9e6;
-        }
-        
-        .activity-title {
-            color: #8b5a3c;
-            font-size: 1.1em;
+            font-size: 1.5em;
             font-weight: 500;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
-        
-        .step-container {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border-left: 4px solid #d4af8c;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+
+        .intro-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
         }
-        
-        .step-title {
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 1em;
-            color: #2c3e50;
-        }
-        
-        .step-instruction {
-            color: #5a6c7d;
-            margin-bottom: 8px;
-            font-size: 0.85em;
-        }
-        
-        .input-field {
-            background: white;
-            border: 2px solid #e8e6e3;
-            border-radius: 6px;
-            padding: 12px;
-            width: 100%;
-            margin: 8px 0;
-            font-family: 'Kiwi Maru', sans-serif;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            color: #2c3e50;
-            resize: vertical;
-        }
-        
-        .input-field:focus {
-            outline: none;
-            border-color: #8b5a3c;
-            box-shadow: 0 0 10px rgba(139, 90, 60, 0.1);
-        }
-        
-        .input-field::placeholder {
-            color: #a0a9b8;
-            font-style: italic;
-        }
-        
-        .examples-grid {
+
+        .days-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 10px;
-            margin: 15px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
         }
-        
-        .example-item {
+
+        .day-card {
             background: white;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #e8e6e3;
-            transition: transform 0.2s ease;
-        }
-        
-        .example-item:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-        
-        .example-english {
-            font-weight: 500;
-            color: #2c3e50;
-            margin-bottom: 4px;
-            font-size: 0.95em;
-        }
-        
-        .example-japanese {
-            color: #7d8590;
-            font-size: 0.8em;
-        }
-        
-        .choice-group {
-            display: flex;
-            gap: 10px;
-            margin: 12px 0;
-            flex-wrap: wrap;
-        }
-        
-        .choice-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 14px;
-            background: white;
-            border-radius: 16px;
-            border: 1.5px solid #d4af8c;
-            cursor: pointer;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            font-size: 0.85em;
-            flex: 1;
-            min-width: 120px;
-            justify-content: center;
+            border-left: 5px solid #b39ddb;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .choice-item:hover {
-            background: #f8f6f4;
-            transform: translateY(-1px);
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(179, 157, 219, 0.2);
         }
-        
-        .choice-item input[type="radio"] {
-            display: none;
+
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #b39ddb, #7e57c2);
         }
-        
-        .choice-item input[type="radio"]:checked + .choice-label {
-            color: #8b5a3c;
-            font-weight: 500;
-        }
-        
-        .choice-label::before {
-            content: "○";
-            font-size: 1em;
-            margin-right: 4px;
-            color: #d4af8c;
-        }
-        
-        .choice-item input[type="radio"]:checked + .choice-label::before {
-            content: "●";
-            color: #8b5a3c;
-        }
-        
-        .mood-selector {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        
-        .mood-emoji {
-            font-size: 2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 10px;
-            border-radius: 50%;
-            background: white;
-            border: 2px solid #e8e6e3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .day-number {
+            background: #b39ddb;
+            color: white;
             width: 50px;
             height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
-        
-        .mood-emoji:hover {
-            transform: scale(1.1);
-            background: #f8f6f4;
-            border-color: #d4af8c;
-        }
-        
-        .mood-emoji.selected {
-            background: #f8f6f4;
-            border-color: #8b5a3c;
-            transform: scale(1.1);
-        }
-        
-        .submit-section {
-            background: linear-gradient(135deg, #f8f6f4, #f2f4f7);
-            padding: 18px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border: 1px solid #d4af8c;
-        }
-        
-        .submit-section h3 {
-            color: #8b5a3c;
-            margin-bottom: 12px;
+
+        .day-title {
+            color: #7e57c2;
+            font-size: 1.3em;
             font-weight: 500;
-            font-size: 1.05em;
+            margin-bottom: 10px;
         }
-        
-        .submit-button {
-            background: linear-gradient(135deg, #8b5a3c, #d4af8c);
+
+        .day-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .day-link {
+            display: inline-block;
+            background: #b39ddb;
             color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 20px;
-            font-size: 1.05em;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
             font-weight: 500;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(139, 90, 60, 0.3);
             transition: all 0.3s ease;
-            font-family: 'Kiwi Maru', sans-serif;
-            width: 100%;
+            box-shadow: 0 3px 10px rgba(179, 157, 219, 0.3);
         }
-        
-        .submit-button:hover {
+
+        .day-link:hover {
+            background: #7e57c2;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(139, 90, 60, 0.4);
+            box-shadow: 0 5px 15px rgba(126, 87, 194, 0.4);
         }
-        
-        .submit-button:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
+
+        .progress-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        .completion-note {
+
+        .progress-section h3 {
+            color: #7e57c2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .progress-bar {
+            background: #e1bee7;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            background: #b39ddb;
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .tips-section {
+            background: #e8f5e8;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #4caf50;
+            margin-bottom: 30px;
+        }
+
+        .tips-section h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .tips-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-section li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tips-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            background: #fff3e0;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
             text-align: center;
-            margin-top: 25px;
-            color: #7d8590;
-            background: #fafbfc;
-            padding: 18px;
-            border-radius: 10px;
-            border: 1px solid #e8e6e3;
         }
-        
-        .completion-note p:first-child {
-            font-size: 1.05em;
-            color: #2c3e50;
-            margin-bottom: 6px;
-            font-weight: 500;
+
+        .contact-section h3 {
+            color: #f57c00;
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
-        
-        /* レスポンシブデザイン強化 */
+
         @media (max-width: 768px) {
-            body {
-                padding: 5px;
-            }
-            
             .container {
                 padding: 15px;
-                border-radius: 12px;
-                margin: 5px auto;
             }
             
             .header h1 {
-                font-size: 1.5em;
-                line-height: 1.3;
+                font-size: 2.2em;
             }
             
-            .header .subtitle {
-                font-size: 0.9em;
-            }
-            
-            .week-goal, .learning-note, .day-section, .activity-section, .submit-section {
-                padding: 15px;
-                margin-bottom: 20px;
-            }
-            
-            .day-header {
-                font-size: 1em;
-                padding: 10px 15px;
-                border-radius: 15px;
-            }
-            
-            .pattern-text {
-                font-size: 1.1em;
-            }
-            
-            .examples-grid {
+            .days-grid {
                 grid-template-columns: 1fr;
-                gap: 8px;
+                gap: 20px;
             }
             
-            .choice-group {
-                flex-direction: column;
-                gap: 8px;
-            }
-            
-            .choice-item {
-                padding: 10px 15px;
-                justify-content: flex-start;
-                min-width: auto;
-                flex: none;
-            }
-            
-            .mood-selector {
-                gap: 10px;
-            }
-            
-            .mood-emoji {
-                font-size: 1.6em;
-                width: 45px;
-                height: 45px;
-                padding: 8px;
-            }
-            
-            .input-field {
-                font-size: 16px; /* iOS zoom防止 */
-                padding: 12px;
-            }
-            
-            .submit-button {
-                padding: 14px 25px;
-                font-size: 1em;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 12px;
-                margin: 3px auto;
-            }
-            
-            .header h1 {
-                font-size: 1.3em;
-            }
-            
-            .week-goal, .learning-note, .day-section, .activity-section, .submit-section {
-                padding: 12px;
-                margin-bottom: 15px;
-            }
-            
-            .day-header {
-                font-size: 0.95em;
-                padding: 8px 12px;
-            }
-            
-            .mood-emoji {
-                font-size: 1.4em;
-                width: 40px;
-                height: 40px;
-            }
-            
-            .submit-button {
-                font-size: 0.95em;
-                padding: 12px 20px;
+            .day-card {
+                padding: 20px;
             }
         }
     </style>
@@ -489,316 +246,131 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Week1: Love Story<br>お願い上手になろう</h1>
-            <p class="subtitle">Day 1 - 歌詞を聞いて、使えるパターンを見つけよう</p>
+            <h1>Week1: Love Story</h1>
+            <p>お願い上手になろう</p>
+            <p style="font-size: 1em; margin-top: 10px;">音楽で学ぶ英語 5日間の旅</p>
         </div>
-        
-        <div class="week-goal">
-            <h2>今週覚えるパターン</h2>
-            <div class="pattern-box">
-                <div class="pattern-text">お願いする表現</div>
-                <div class="pattern-example">Take me... / Please help me / Don't go...</div>
+
+        <div class="intro-section">
+            <h2>Welcome! ようこそ</h2>
+            <p>Taylor SwiftのLove Storyを使って、英語の「お願い表現」をマスターする5日間です。</p>
+            <p>文法用語は一切使わず、音楽を楽しみながら自然に英語が身につく設計になっています。</p>
+            <p><strong>各Dayは約30分程度</strong>で完了できます。完了後はスクリーンショットを撮ってLINEで送信してくださいね。</p>
+        </div>
+
+        <div class="progress-section">
+            <h3>進捗状況</h3>
+            <p>完了したDayをクリックして進捗をチェック！</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
             </div>
-            <p style="margin-top: 10px; color: #5a6c7d; font-size: 0.9em;">
-                Love Storyから「お願いする英語」を覚えて、ホステルで使えるようになろう！
-            </p>
+            <p id="progressText">0/5 Day完了</p>
         </div>
-        
-        <div class="learning-note">
-            <h3>学習の前に大切なこと</h3>
-            <p><strong>スペルは気にしなくてOK！</strong></p>
+
+        <div class="days-grid">
+            <div class="day-card">
+                <div class="day-number">1</div>
+                <h3 class="day-title">歌詞から発見</h3>
+                <p class="day-description">
+                    Love Storyを聞きながら、命令文を自然に発見していきます。
+                    リスニング練習と単語の認識がメイン。
+                </p>
+                <a href="day1.html" class="day-link" onclick="markComplete(1)">Day1 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">2</div>
+                <h3 class="day-title">文を作ってみよう</h3>
+                <p class="day-description">
+                    単語カードを並び替えて英文を作る練習。
+                    英語の語順に慣れることが目標です。
+                </p>
+                <a href="day2.html" class="day-link" onclick="markComplete(2)">Day2 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">3</div>
+                <h3 class="day-title">Pleaseの4パターン</h3>
+                <p class="day-description">
+                    丁寧なお願いの仕方を4つのパターンで学習。
+                    これで礼儀正しい英語が使えるように。
+                </p>
+                <a href="day3.html" class="day-link" onclick="markComplete(3)">Day3 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">4</div>
+                <h3 class="day-title">ホステル実践+オアシス探検</h3>
+                <p class="day-description">
+                    実際のホステル場面での応用練習。
+                    さらにOasisの楽曲からも命令文を探します。
+                </p>
+                <a href="day4.html" class="day-link" onclick="markComplete(4)">Day4 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">5</div>
+                <h3 class="day-title">まとめ&実践準備</h3>
+                <p class="day-description">
+                    Week1の総まとめと振り返り。
+                    実際に使ってみたいフレーズを選んで完走！
+                </p>
+                <a href="day5.html" class="day-link" onclick="markComplete(5)">Day5 を開始</a>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3>学習のコツ</h3>
             <ul>
-                <li>聞いて意味がわかる</li>
-                <li>意味がわかって単語が言える</li>
-                <li>読んで意味がわかる</li>
+                <li>完璧を目指さず、「なんとなくわかる」程度でOK</li>
+                <li>音楽を楽しみながらリラックスして取り組む</li>
+                <li>わからないことがあれば遠慮なく質問</li>
+                <li>スペルより「音」を重視して学習</li>
+                <li>1日1Day、無理のないペースで進める</li>
             </ul>
-            <p style="font-size: 0.85em; margin-top: 8px;">
-                語順があっていればOK！冠詞（a, the）や複数形のsも最初は気にしなくて大丈夫。
-            </p>
         </div>
-        
-        <div class="day-section">
-            <div class="day-header">
-                🎵 Day 1: 歌詞発見（30分）
-            </div>
-            
-            <div class="activity-section">
-                <div class="activity-title">
-                    ステップ1: 聞く練習（3回に分けて）
-                </div>
-                
-                <div class="step-container">
-                    <div class="step-title">① まずは歌詞に意識して聞く</div>
-                    <div class="step-instruction">聞いたことある単語をカタカナでいいから書き出してみて<br>
-                    例：ヤング（young）、ストーリー（story）</div>
-                    <textarea class="input-field" rows="3" placeholder="ここに聞き取れた単語を書いてください"></textarea>
-                </div>
-                
-                <div class="step-container">
-                    <div class="step-title">② 歌詞を見ながら聞く</div>
-                    <div class="step-instruction">読んだら知ってた単語をチェックして、書き出してみて<br>
-                    <small>※歌詞は先生が用意します</small></div>
-                    <textarea class="input-field" rows="3" placeholder="知ってた単語をたくさん書いてみてください"></textarea>
-                </div>
-                
-                <div class="step-container">
-                    <div class="step-title">③ 歌えそうなところ一緒に口ずさんでみる</div>
-                    <div class="step-instruction">どの部分が歌いやすかった？</div>
-                    <textarea class="input-field" rows="2" placeholder="歌いやすかった部分を教えてください"></textarea>
-                </div>
-            </div>
-            
-            <div class="activity-section">
-                <div class="activity-title">
-                    ステップ2: 歌詞から命令文（お願いの言い方）を見つけよう
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <h4 style="color: #2c3e50; margin-bottom: 12px; font-size: 1em;">Love Storyに出てくる命令文</h4>
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <div class="example-english">Stay away from Juliet</div>
-                            <div class="example-japanese">→ ジュリエットに近づくな</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Please don't go</div>
-                            <div class="example-japanese">→ お願い、行かないで</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Take me somewhere</div>
-                            <div class="example-japanese">→ どこかに連れて行って</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Romeo, save me</div>
-                            <div class="example-japanese">→ ロミオ、私を救って</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Just say 'Yes'</div>
-                            <div class="example-japanese">→ ただ「はい」と言って</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <p style="font-weight: 500; margin-bottom: 10px;">これらをホステルで使うなら？</p>
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <div class="example-english">Please help me</div>
-                            <div class="example-japanese">→ 手伝って</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Wait a minute</div>
-                            <div class="example-japanese">→ ちょっと待って</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Come with me</div>
-                            <div class="example-japanese">→ 一緒に来て</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Don't worry</div>
-                            <div class="example-japanese">→ 心配しないで</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Try this</div>
-                            <div class="example-japanese">→ これ試してみて</div>
-                        </div>
-                        <div class="example-item">
-                            <div class="example-english">Take a photo</div>
-                            <div class="example-japanese">→ 写真撮って</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="activity-section">
-                <div class="activity-title">
-                    ステップ3: 今日の発見
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <p style="font-weight: 500; margin-bottom: 8px;">「あ、この単語知ってる！」と思った瞬間はあった？</p>
-                    <div class="choice-group">
-                        <div class="choice-item">
-                            <input type="radio" id="lots" name="knowledge" value="たくさんあった">
-                            <label for="lots" class="choice-label">たくさんあった</label>
-                        </div>
-                        <div class="choice-item">
-                            <input type="radio" id="some" name="knowledge" value="少しあった">
-                            <label for="some" class="choice-label">少しあった</label>
-                        </div>
-                        <div class="choice-item">
-                            <input type="radio" id="few" name="knowledge" value="あまりなかった">
-                            <label for="few" class="choice-label">あまりなかった</label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <p style="font-weight: 500; margin-bottom: 8px;">「書いてあるように聞こえない！」って文はあった？</p>
-                    <div class="step-instruction">例：don't go が「ドント ゴー」じゃなく「ドンゴー」に聞こえる、など</div>
-                    <textarea class="input-field" rows="2" placeholder="聞こえ方をカタカナで書いてみてください"></textarea>
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <p style="font-weight: 500; margin-bottom: 8px;">命令文の特徴、何か気づいた？</p>
-                    <textarea class="input-field" rows="2" placeholder="あなたの気づきを教えてください"></textarea>
-                </div>
-                
-                <div style="text-align: center; margin: 20px 0;">
-                    <p style="margin-bottom: 12px; font-weight: 500;">今日の気分は？</p>
-                    <div class="mood-selector">
-                        <div class="mood-emoji" data-mood="最高！" title="最高！">🌟</div>
-                        <div class="mood-emoji" data-mood="楽しい" title="楽しい">😊</div>
-                        <div class="mood-emoji" data-mood="普通" title="普通">😐</div>
-                        <div class="mood-emoji" data-mood="少し難しい" title="少し難しい">🤔</div>
-                        <div class="mood-emoji" data-mood="疲れた" title="疲れた">😴</div>
-                    </div>
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <p style="font-weight: 500; margin-bottom: 8px;">何か質問はありますか？</p>
-                    <div class="step-instruction">今日の学習で分からなかったことや、聞いてみたいことがあれば何でもどうぞ！</div>
-                    <textarea class="input-field" rows="3" placeholder="質問があれば気軽にどうぞ（任意）"></textarea>
-                </div>
-            </div>
-        </div>
-        
-        <div class="submit-section">
-            <h3>提出前の確認</h3>
-            <input type="text" id="studentName" class="input-field" placeholder="あなたの名前を入力してください" required>
-            <input type="email" id="studentEmail" class="input-field" placeholder="メールアドレス（任意）">
-            
-            <div style="text-align: center; margin: 20px 0;">
-                <button id="submitBtn" class="submit-button" onclick="submitWorksheet()">
-                    Day1ワークシートを提出する
-                </button>
-            </div>
-            
-            <div id="submitMessage" style="text-align: center; margin: 15px 0; display: none;"></div>
-        </div>
-        
-        <div class="completion-note">
-            <p>お疲れさまでした！</p>
-            <p>明日のDay2では「Take me...」パターンの単語入れ替え練習をします</p>
+
+        <div class="contact-section">
+            <h3>質問・相談はいつでもOK</h3>
+            <p>困ったことや疑問があれば、LINEでいつでもご連絡ください。</p>
+            <p>一緒に楽しく英語を学んでいきましょう！</p>
         </div>
     </div>
-    
+
     <script>
-        // 気分選択の機能
-        document.querySelectorAll('.mood-emoji').forEach(emoji => {
-            emoji.addEventListener('click', function() {
-                // 他の選択をリセット
-                document.querySelectorAll('.mood-emoji').forEach(e => {
-                    e.classList.remove('selected');
-                });
-                // 選択されたものをハイライト
-                this.classList.add('selected');
-            });
-        });
-        
-        // ラジオボタンの単一選択確保
-        document.querySelectorAll('input[type="radio"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                if (this.checked) {
-                    // 同じname属性の他のラジオボタンの選択を解除
-                    const name = this.getAttribute('name');
-                    document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
-                        if (r !== this) {
-                            r.checked = false;
-                            r.closest('.choice-item').style.background = '';
-                        }
-                    });
-                    // 選択されたアイテムをハイライト
-                    this.closest('.choice-item').style.background = '#f8f6f4';
-                }
-            });
-        });
-        
-        // フォーム送信機能
-        async function submitWorksheet() {
-            const submitBtn = document.getElementById('submitBtn');
-            const messageDiv = document.getElementById('submitMessage');
-            
-            // バリデーション
-            const studentName = document.getElementById('studentName').value.trim();
-            if (!studentName) {
-                alert('お名前を入力してください');
-                return;
+        // 進捗管理
+        function markComplete(day) {
+            let completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (!completed.includes(day)) {
+                completed.push(day);
+                localStorage.setItem('completedDays', JSON.stringify(completed));
             }
-            
-            // ボタン無効化
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '送信中...';
-            
-            try {
-                // フォームデータ収集
-                const formData = {
-                    studentName: studentName,
-                    email: document.getElementById('studentEmail').value.trim(),
-                    week: 'Week1',
-                    day: 'Day1',
-                    listening1: document.querySelector('textarea[placeholder*="聞き取れた単語"]').value,
-                    listening2: document.querySelector('textarea[placeholder*="知ってた単語"]').value,
-                    listening3: document.querySelector('textarea[placeholder*="歌いやすかった部分"]').value,
-                    knowledge: getSelectedRadio('knowledge'),
-                    linking: document.querySelector('textarea[placeholder*="聞こえ方をカタカナ"]').value,
-                    discovery: document.querySelector('textarea[placeholder*="気づきを教えて"]').value,
-                    mood: getSelectedMood(),
-                    questions: document.querySelector('textarea[placeholder*="質問があれば"]').value,
-                    submittedAt: new Date().toISOString()
-                };
-                
-                // Google Apps Scriptに送信（あなたの最新URLに更新してください）
-                const response = await fetch('https://script.google.com/macros/s/AKfycbwclhAAo5jHUbwrpXYItpFecS8uyEzDPa5lXyiETf6ShGeSa6aj2sz4lDOref6Q5QzU/exec', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                const result = await response.json();
-                
-                if (result.status === 'success') {
-                    messageDiv.innerHTML = `
-                        <div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 8px; border: 1px solid #c3e6cb;">
-                            ✅ 提出完了！先生に通知が送られました。お疲れさまでした！
-                        </div>
-                    `;
-                    messageDiv.style.display = 'block';
-                    
-                    // フォームを無効化
-                    document.querySelectorAll('input, textarea').forEach(el => el.disabled = true);
-                    
-                } else {
-                    throw new Error('送信に失敗しました');
-                }
-                
-            } catch (error) {
-                messageDiv.innerHTML = `
-                    <div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 8px; border: 1px solid #f5c6cb;">
-                        ❌ 送信に失敗しました。記入済みの画面をスクリーンショットしてLINEで送ってください。
-                    </div>
-                `;
-                messageDiv.style.display = 'block';
-                
-                // ボタンを再有効化
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Day1ワークシートを提出する';
-            }
+            updateProgress();
         }
 
-        // ラジオボタンの選択値を取得
-        function getSelectedRadio(name) {
-            const selected = document.querySelector(`input[name="${name}"]:checked`);
-            return selected ? selected.value : '';
+        function updateProgress() {
+            let completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            let progress = (completed.length / 5) * 100;
+            
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = `${completed.length}/5 Day完了`;
+            
+            // 完了したDayのカードにマークを追加
+            completed.forEach(day => {
+                let cards = document.querySelectorAll('.day-card');
+                if (cards[day - 1]) {
+                    cards[day - 1].style.backgroundColor = '#f8f5ff';
+                    let dayNumber = cards[day - 1].querySelector('.day-number');
+                    if (dayNumber && !dayNumber.textContent.includes('✓')) {
+                        dayNumber.innerHTML = day + ' ✓';
+                        dayNumber.style.backgroundColor = '#4caf50';
+                    }
+                }
+            });
         }
 
-        // 選択された気分を取得
-        function getSelectedMood() {
-            const selectedMood = document.querySelector('.mood-emoji.selected');
-            return selectedMood ? selectedMood.getAttribute('data-mood') : '';
-        }
+        // ページ読み込み時に進捗を更新
+        document.addEventListener('DOMContentLoaded', updateProgress);
     </script>
 </body>
 </html>
