@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week1 Day1: Love Story お願い上手になろう</title>
+    <title>Week1 Day1: Love Story - 命令文を見つけよう</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,146 +15,300 @@
         body {
             font-family: 'Noto Sans JP', sans-serif;
             background: #f3e5f5;
-            min-height: 100vh;
             color: #424242;
-            line-height: 1.6;
+            line-height: 1.8;
+            padding: 10px;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(179, 157, 219, 0.2);
+            overflow: hidden;
         }
 
         .header {
-            text-align: center;
-            background: #b39ddb;
+            background: linear-gradient(135deg, #b39ddb, #7e57c2);
             color: white;
             padding: 30px 20px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+            text-align: center;
         }
 
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 700;
+            margin-bottom: 10px;
         }
 
-        .day-info {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            border-left: 5px solid #7e57c2;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .header p {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            opacity: 0.95;
+            font-weight: 300;
         }
 
-        .section {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .section h2 {
+        .back-link {
+            display: inline-block;
+            margin: 20px;
             color: #7e57c2;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-            border-bottom: 2px solid #b39ddb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #b39ddb;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .content {
+                padding: 40px;
+            }
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, #f8f5ff, #fef9f3);
+            border-left: 4px solid #7e57c2;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .intro-box h2 {
+            color: #7e57c2;
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
+            margin-bottom: 15px;
+        }
+
+        .intro-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .intro-box li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+        }
+
+        .intro-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #7e57c2;
+            font-weight: bold;
+        }
+
+        .important-note {
+            background: #fff9e6;
+            border: 2px solid #ffd54f;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        }
+
+        .exercise-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #fafafa;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .exercise-section h3 {
+            color: #7e57c2;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            margin-bottom: 15px;
             padding-bottom: 10px;
-            font-weight: 500;
+            border-bottom: 2px solid #b39ddb;
         }
 
-        .input-group {
-            margin-bottom: 20px;
+        .exercise-section p {
+            margin: 12px 0;
+            color: #5d5d5d;
+            font-size: clamp(0.9rem, 3vw, 1rem);
         }
 
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #424242;
-        }
-
-        input[type="text"], input[type="email"], textarea, select {
+        .input-field {
             width: 100%;
-            padding: 12px 15px;
+            padding: 12px;
+            margin: 10px 0;
             border: 2px solid #e1bee7;
-            border-radius: 10px;
+            border-radius: 8px;
             font-family: 'Noto Sans JP', sans-serif;
-            font-size: 16px;
-            transition: border-color 0.3s;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            transition: border-color 0.3s ease;
+            resize: vertical;
         }
 
-        input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+        .input-field:focus {
             outline: none;
             border-color: #b39ddb;
-            box-shadow: 0 0 0 3px rgba(179, 157, 219, 0.1);
+            background: #f8f5ff;
         }
 
-        textarea {
-            resize: vertical;
+        textarea.input-field {
             min-height: 80px;
         }
 
-        .examples {
-            background: #f8f5ff;
-            padding: 15px;
-            border-radius: 10px;
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
             margin: 15px 0;
-            border-left: 4px solid #b39ddb;
         }
 
-        .button {
-            background: #b39ddb;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background 0.2s ease;
             cursor: pointer;
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 1.1em;
-            font-weight: 500;
+        }
+
+        .checkbox-item:hover {
+            background: #f8f5ff;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: #7e57c2;
+        }
+
+        .checkbox-item label {
+            cursor: pointer;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+        }
+
+        .mood-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+            justify-content: center;
+        }
+
+        .mood-emoji {
+            font-size: 2rem;
+            padding: 12px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            border-radius: 50%;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
-            width: 100%;
-            margin-top: 20px;
+            background: white;
         }
 
-        .button:hover {
-            background: #7e57c2;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(126, 87, 194, 0.4);
+        .mood-emoji:hover {
+            transform: scale(1.1);
+            border-color: #b39ddb;
         }
 
-        .lyrics-section {
+        .mood-emoji.selected {
+            border-color: #7e57c2;
+            background: #f8f5ff;
+            transform: scale(1.15);
+        }
+
+        .student-info {
             background: #f8f5ff;
             padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border: 2px solid #b39ddb;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 2px solid #e1bee7;
         }
 
-        .lyrics-section h3 {
+        .student-info h3 {
             color: #7e57c2;
             margin-bottom: 15px;
-            font-size: 1.2em;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
         }
 
-        @media (max-width: 768px) {
-            .container {
+        .submit-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #b39ddb, #7e57c2);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(179, 157, 219, 0.3);
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans JP', sans-serif;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(126, 87, 194, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            display: none;
+        }
+
+        .message.success {
+            background: #c8e6c9;
+            color: #2e7d32;
+            border: 1px solid #81c784;
+            display: block;
+        }
+
+        .message.error {
+            background: #ffcdd2;
+            color: #c62828;
+            border: 1px solid #ef5350;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .content {
                 padding: 15px;
             }
-            
-            .header h1 {
-                font-size: 2em;
+
+            .exercise-section {
+                padding: 15px;
             }
-            
-            .section {
-                padding: 20px;
+
+            .mood-emoji {
+                font-size: 1.5rem;
+                padding: 8px;
             }
         }
     </style>
@@ -162,159 +316,194 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Week1 Day1</h1>
-            <p>Love Story お願い上手になろう</p>
-            <p style="font-size: 0.9em; opacity: 0.9;">歌詞から発見してみよう</p>
+            <h1>Love Story で学ぶ英語</h1>
+            <p>Week 1 - Day 1: 命令文を見つけよう</p>
         </div>
 
-        <div class="day-info">
-            <h3>📅 今日の目標</h3>
-            <p>Taylor SwiftのLove Storyを聞きながら、「お願いする」表現を自然に発見していきます。文法用語は一切使わず、音楽を楽しみながら英語に親しみましょう！</p>
+        <a href="index.html" class="back-link">← Week1 目次に戻る</a>
+
+        <div class="content">
+            <div class="intro-box">
+                <h2>今週の目標</h2>
+                <ul>
+                    <li>命令文でお願いや指示ができるようになる</li>
+                    <li>ホステルで実際に使える「お願い英語」を身につける</li>
+                    <li>英語の音に慣れて、「意外とわかる」を体験する</li>
+                </ul>
+            </div>
+
+            <div class="important-note">
+                <strong>大切なこと：</strong> スペルは気にしなくてOK！語順があっていればOKです。冠詞（a, the）や複数形のsも最初は気にしなくて大丈夫。カタカナで書いてもOKです。
+            </div>
+
+            <form id="worksheetForm">
+                <div class="exercise-section">
+                    <h3>聞く練習①：まずは歌詞に意識して聞く</h3>
+                    <p>Love Storyを聴いて、聞いたことある単語をカタカナでいいから書き出してみて</p>
+                    <p style="font-size: 0.9em; color: #7d8590;">例：ヤング（young）、ストーリー（story）</p>
+                    <textarea class="input-field" name="listening1" rows="3" placeholder="聞き取れた単語を書いてみよう"></textarea>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>聞く練習②：歌詞を見ながら聞く</h3>
+                    <p>読んだら知ってた単語をチェックして、書き出してみて</p>
+                    <textarea class="input-field" name="listening2" rows="3" placeholder="知ってた単語を書いてみよう"></textarea>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>聞く練習③：歌えそうなところ一緒に口ずさんでみる</h3>
+                    <input type="text" class="input-field" name="listening3" placeholder="どの部分が歌いやすかった？">
+                    
+                    <p style="margin-top: 20px;"><strong>「書いてあるように聞こえない！」って文はあった？</strong></p>
+                    <p style="font-size: 0.9em; color: #7d8590;">例：don't go が「ドント ゴー」じゃなく「ドンゴー」に聞こえる、など</p>
+                    <textarea class="input-field" name="linking" rows="3" placeholder="聞こえ方をカタカナで書いてみて"></textarea>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>気づきタイム</h3>
+                    <p><strong>「あ、この単語知ってる！」と思った瞬間はあった？</strong></p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="knowledge" value="たくさんあった">
+                            <span>たくさんあった</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="knowledge" value="少しあった">
+                            <span>少しあった</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="knowledge" value="あまりなかった">
+                            <span>あまりなかった</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>命令文について</h3>
+                    <p>歌詞には「〜して」「〜しないで」というお願いの文がたくさんあるよ。気づいたことを教えて！</p>
+                    <textarea class="input-field" name="discovery" rows="4" placeholder="あなたの気づきを自由に書いてね"></textarea>
+                </div>
+
+                <div class="exercise-section">
+                    <h3>今日の気分は？</h3>
+                    <div class="mood-selector">
+                        <span class="mood-emoji" data-mood="最高" title="最高！">🌟</span>
+                        <span class="mood-emoji" data-mood="楽しい" title="楽しい">😊</span>
+                        <span class="mood-emoji" data-mood="普通" title="普通">😐</span>
+                        <span class="mood-emoji" data-mood="少し難しい" title="少し難しい">🤔</span>
+                        <span class="mood-emoji" data-mood="疲れた" title="疲れた">😴</span>
+                    </div>
+                    <input type="hidden" name="mood" id="moodInput">
+                </div>
+
+                <div class="exercise-section">
+                    <h3>質問コーナー</h3>
+                    <p>今日の学習で分からなかったことや、聞いてみたいことがあれば何でもどうぞ！</p>
+                    <p style="font-size: 0.9em; color: #7d8590;">次回のセッションやLINEで回答します（任意）</p>
+                    <textarea class="input-field" name="questions" rows="3" placeholder="質問があれば気軽にどうぞ"></textarea>
+                </div>
+
+                <div class="student-info">
+                    <h3>提出前の確認</h3>
+                    <input type="text" class="input-field" id="studentName" name="name" placeholder="あなたの名前を入力してください" required>
+                    <input type="email" class="input-field" id="studentEmail" name="email" placeholder="メールアドレス（任意）">
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        📤 ワークシートを提出する
+                    </button>
+                </div>
+
+                <div id="submitMessage" class="message"></div>
+            </form>
         </div>
-
-        <form id="worksheetForm">
-            <div class="section">
-                <h2>👤 基本情報</h2>
-                <div class="input-group">
-                    <label for="studentName">お名前</label>
-                    <input type="text" id="studentName" name="studentName" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>🎵 リスニング練習</h2>
-                <div class="lyrics-section">
-                    <h3>Love Story を聞いてみましょう</h3>
-                    <p>まずは楽曲を聞いて、聞き取れた単語を書いてみてください。完璧でなくて大丈夫！</p>
-                </div>
-                
-                <div class="input-group">
-                    <label for="listening1">①聞き取れた単語をいくつでも書いてください</label>
-                    <input type="text" id="listening1" name="listening1" placeholder="例：love, story, take, me">
-                </div>
-
-                <div class="input-group">
-                    <label for="listening2">②この中で知っている単語はありましたか？</label>
-                    <input type="text" id="listening2" name="listening2" placeholder="知っていた単語を書いてください">
-                </div>
-
-                <div class="input-group">
-                    <label for="listening3">③一番歌いやすそうだと思った部分は？</label>
-                    <input type="text" id="listening3" name="listening3" placeholder="なんとなく口ずさめそうな部分">
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>🔍 発見タイム</h2>
-                <div class="examples">
-                    <p><strong>Love Storyには「お願い」の表現がたくさん出てきます：</strong></p>
-                    <p>• "Take me somewhere"（どこかに連れて行って）</p>
-                    <p>• "Save me"（私を救って）</p>
-                    <p>• "Please don't go"（お願い、行かないで）</p>
-                    <p>• "Just say yes"（ただイエスと言って）</p>
-                </div>
-
-                <div class="input-group">
-                    <label for="knowledge">これらの表現の中で、「あ、これ知ってる！」と思ったものはありますか？</label>
-                    <textarea id="knowledge" name="knowledge" placeholder="知っている表現や、なんとなく意味がわかる表現について書いてください"></textarea>
-                </div>
-
-                <div class="input-group">
-                    <label for="linking">歌を聞いていて、単語がつながって聞こえる部分に気づきましたか？</label>
-                    <textarea id="linking" name="linking" placeholder="例：Take meが「テイクミー」じゃなくて「テイミー」に聞こえた　など"></textarea>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>💡 気づき</h2>
-                <div class="input-group">
-                    <label for="discovery">上の「お願い表現」を見て、何か共通点に気づきましたか？</label>
-                    <textarea id="discovery" name="discovery" placeholder="例：どれも短い、動詞で始まる、日本語と語順が違う　など、なんでも気づいたことを書いてください"></textarea>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>😊 今日の振り返り</h2>
-                <div class="input-group">
-                    <label for="mood">今日の気分はいかがですか？</label>
-                    <select id="mood" name="mood" required>
-                        <option value="">選択してください</option>
-                        <option value="very_good">とても良い</option>
-                        <option value="good">良い</option>
-                        <option value="normal">普通</option>
-                        <option value="not_good">イマイチ</option>
-                    </select>
-                </div>
-                
-                <div class="input-group">
-                    <label for="questions">質問や気になることがあれば書いてください</label>
-                    <textarea id="questions" name="questions" placeholder="なんでも遠慮なく書いてください"></textarea>
-                </div>
-            </div>
-
-            <button type="button" class="button" onclick="submitWorksheet()">
-                Day1 完了！
-            </button>
-        </form>
     </div>
 
     <script>
-        function submitWorksheet() {
-            // 入力確認
-            const studentName = document.getElementById('studentName').value;
-            const email = document.getElementById('email').value;
+        // 気分選択
+        document.querySelectorAll('.mood-emoji').forEach(emoji => {
+            emoji.addEventListener('click', function() {
+                document.querySelectorAll('.mood-emoji').forEach(e => e.classList.remove('selected'));
+                this.classList.add('selected');
+                document.getElementById('moodInput').value = this.dataset.mood;
+            });
+        });
+
+        // フォーム送信
+        document.getElementById('worksheetForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            if (!studentName || !email) {
-                alert('お名前とメールアドレスを入力してください。');
+            const submitBtn = document.getElementById('submitBtn');
+            const messageDiv = document.getElementById('submitMessage');
+            const studentName = document.getElementById('studentName').value.trim();
+            
+            if (!studentName) {
+                messageDiv.className = 'message error';
+                messageDiv.textContent = 'お名前を入力してください';
                 return;
             }
-
-            // 完了メッセージを表示
-            showCompletionMessage();
-        }
-
-        function showCompletionMessage() {
-            const completionDiv = document.createElement('div');
-            completionDiv.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: #b39ddb;
-                color: white;
-                padding: 30px;
-                border-radius: 15px;
-                box-shadow: 0 10px 30px rgba(179, 157, 219, 0.3);
-                text-align: center;
-                z-index: 1000;
-                font-family: 'Noto Sans JP', sans-serif;
-                max-width: 400px;
-            `;
             
-            completionDiv.innerHTML = `
-                <h3 style="margin: 0 0 15px 0; font-size: 1.3em;">✨ Day1 完了！ ✨</h3>
-                <p style="margin: 10px 0; line-height: 1.6;">
-                    記入お疲れさまでした！<br>
-                    画面のスクリーンショットを撮って<br>
-                    LINEで送信してください。
-                </p>
-                <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
-                    📱 スクリーンショット後、LINEで<br>
-                    「Day1完了しました」とメッセージを<br>
-                    添えて送信してくださいね。
-                </p>
-                <button onclick="this.parentElement.remove()" 
-                        style="margin-top: 20px; padding: 10px 20px; background: white; color: #7e57c2; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">
-                    閉じる
-                </button>
-            `;
+            submitBtn.disabled = true;
+            submitBtn.textContent = '📤 送信中...';
+            messageDiv.className = 'message';
+            messageDiv.style.display = 'none';
             
-            document.body.appendChild(completionDiv);
-        }
+            const formData = new FormData(this);
+            const data = {
+                access_key: 'efddaa48-1483-4d9b-98ef-302270115670',
+                subject: `Love Story Day1 ワークシート提出 - ${studentName}`,
+                from_name: studentName
+            };
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            const knowledgeChecks = document.querySelectorAll('input[name="knowledge"]:checked');
+            data.knowledge = Array.from(knowledgeChecks).map(cb => cb.value).join(', ') || '未回答';
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    messageDiv.className = 'message success';
+                    messageDiv.textContent = '✅ 提出完了！先生に通知が送られました。お疲れさまでした！';
+                    
+                    const inputs = document.querySelectorAll('input, textarea, button');
+                    inputs.forEach(input => {
+                        if (input.type !== 'submit') {
+                            input.disabled = true;
+                        }
+                    });
+                    
+                    submitBtn.textContent = '✅ 提出済み';
+                    
+                    // 3秒後に目次ページへ自動遷移
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 3000);
+                } else {
+                    throw new Error('送信に失敗しました');
+                }
+                
+            } catch (error) {
+                messageDiv.className = 'message error';
+                messageDiv.textContent = '❌ 送信に失敗しました。LINEで先生にお知らせください。';
+                
+                submitBtn.disabled = false;
+                submitBtn.textContent = '📤 ワークシートを提出する';
+            }
+        });
     </script>
 </body>
 </html>
