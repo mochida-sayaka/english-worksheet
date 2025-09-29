@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week1: Love Story お願い上手になろう</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #f3e5f5;
+            min-height: 100vh;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: #b39ddb;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(179, 157, 219, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .intro-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #7e57c2;
+        }
+
+        .intro-section h2 {
+            color: #7e57c2;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        .intro-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #b39ddb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(179, 157, 219, 0.2);
+        }
+
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #b39ddb, #7e57c2);
+        }
+
+        .day-number {
+            background: #b39ddb;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .day-title {
+            color: #7e57c2;
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .day-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .day-link {
+            display: inline-block;
+            background: #b39ddb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(179, 157, 219, 0.3);
+        }
+
+        .day-link:hover {
+            background: #7e57c2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(126, 87, 194, 0.4);
+        }
+
+        .progress-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .progress-section h3 {
+            color: #7e57c2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .progress-bar {
+            background: #e1bee7;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            background: #b39ddb;
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .tips-section {
+            background: #e8f5e8;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #4caf50;
+            margin-bottom: 30px;
+        }
+
+        .tips-section h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .tips-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-section li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tips-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            background: #fff3e0;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            color: #f57c00;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .days-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .day-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Week1: Love Story</h1>
+            <p>お願い上手になろう</p>
+            <p style="font-size: 1em; margin-top: 10px;">音楽で学ぶ英語 5日間の旅</p>
+        </div>
+
+        <div class="intro-section">
+            <h2>Welcome! ようこそ</h2>
+            <p>Taylor SwiftのLove Storyを使って、英語の「お願い表現」をマスターする5日間です。</p>
+            <p>文法用語は一切使わず、音楽を楽しみながら自然に英語が身につく設計になっています。</p>
+            <p><strong>各Dayは約30分程度</strong>で完了できます。完了後はスクリーンショットを撮ってLINEで送信してくださいね。</p>
+        </div>
+
+        <div class="progress-section">
+            <h3>進捗状況</h3>
+            <p>完了したDayをクリックして進捗をチェック！</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p id="progressText">0/5 Day完了</p>
+        </div>
+
+        <div class="days-grid">
+            <div class="day-card">
+                <div class="day-number">1</div>
+                <h3 class="day-title">歌詞から発見</h3>
+                <p class="day-description">
+                    Love Storyを聞きながら、命令文を自然に発見していきます。
+                    リスニング練習と単語の認識がメイン。
+                </p>
+                <a href="day1.html" class="day-link" onclick="markComplete(1)">Day1 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">2</div>
+                <h3 class="day-title">文を作ってみよう</h3>
+                <p class="day-description">
+                    単語カードを並び替えて英文を作る練習。
+                    英語の語順に慣れることが目標です。
+                </p>
+                <a href="day2.html" class="day-link" onclick="markComplete(2)">Day2 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">3</div>
+                <h3 class="day-title">Pleaseの4パターン</h3>
+                <p class="day-description">
+                    丁寧なお願いの仕方を4つのパターンで学習。
+                    これで礼儀正しい英語が使えるように。
+                </p>
+                <a href="day3.html" class="day-link" onclick="markComplete(3)">Day3 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">4</div>
+                <h3 class="day-title">ホステル実践+オアシス探検</h3>
+                <p class="day-description">
+                    実際のホステル場面での応用練習。
+                    さらにOasisの楽曲からも命令文を探します。
+                </p>
+                <a href="day4.html" class="day-link" onclick="markComplete(4)">Day4 を開始</a>
+            </div>
+
+            <div class="day-card">
+                <div class="day-number">5</div>
+                <h3 class="day-title">まとめ&実践準備</h3>
+                <p class="day-description">
+                    Week1の総まとめと振り返り。
+                    実際に使ってみたいフレーズを選んで完走！
+                </p>
+                <a href="day5.html" class="day-link" onclick="markComplete(5)">Day5 を開始</a>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3>学習のコツ</h3>
+            <ul>
+                <li>完璧を目指さず、「なんとなくわかる」程度でOK</li>
+                <li>音楽を楽しみながらリラックスして取り組む</li>
+                <li>わからないことがあれば遠慮なく質問</li>
+                <li>スペルより「音」を重視して学習</li>
+                <li>1日1Day、無理のないペースで進める</li>
+            </ul>
+        </div>
+
+        <div class="contact-section">
+            <h3>質問・相談はいつでもOK</h3>
+            <p>困ったことや疑問があれば、LINEでいつでもご連絡ください。</p>
+            <p>一緒に楽しく英語を学んでいきましょう！</p>
+        </div>
+    </div>
+
+    <script>
+        // 進捗管理
+        function markComplete(day) {
+            let completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            if (!completed.includes(day)) {
+                completed.push(day);
+                localStorage.setItem('completedDays', JSON.stringify(completed));
+            }
+            updateProgress();
+        }
+
+        function updateProgress() {
+            let completed = JSON.parse(localStorage.getItem('completedDays') || '[]');
+            let progress = (completed.length / 5) * 100;
+            
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = `${completed.length}/5 Day完了`;
+            
+            // 完了したDayのカードにマークを追加
+            completed.forEach(day => {
+                let cards = document.querySelectorAll('.day-card');
+                if (cards[day - 1]) {
+                    cards[day - 1].style.backgroundColor = '#f8f5ff';
+                    let dayNumber = cards[day - 1].querySelector('.day-number');
+                    if (dayNumber && !dayNumber.textContent.includes('✓')) {
+                        dayNumber.innerHTML = day + ' ✓';
+                        dayNumber.style.backgroundColor = '#4caf50';
+                    }
+                }
+            });
+        }
+
+        // ページ読み込み時に進捗を更新
+        document.addEventListener('DOMContentLoaded', updateProgress);
+    </script>
+</body>
+</html>
